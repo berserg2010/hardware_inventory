@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    env_file:
+      - env_private/web.env
+      - env_private/db.env
+    environment:
+      - DJANGO_DEBUG=false
+    volumes:
+      - .:/usr/src/hardware_inventory/backend
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    env_file:
+      - env_private/db.env
