@@ -1,49 +1,48 @@
 from django.db import models
 
-from .base import BaseHardware
-from .mixins import NetworkMixin
+from hardware.models import BaseHardware, NetworkMixin
 
 
-class Router(NetworkMixin, BaseHardware):
+class Router(BaseHardware, NetworkMixin):
 
     @classmethod
     def _list_fields(cls):
         return (
-            *NetworkMixin._list_fields(),
             *BaseHardware._list_fields(),
+            *NetworkMixin._list_fields(),
         )
 
 
-class MFU(NetworkMixin, BaseHardware):
+class MFU(BaseHardware, NetworkMixin):
 
     @classmethod
     def _list_fields(cls):
         return (
-            *NetworkMixin._list_fields(),
             *BaseHardware._list_fields(),
+            *NetworkMixin._list_fields(),
         )
 
     class Meta:
         verbose_name = "MFU"
 
 
-class Printer(NetworkMixin, BaseHardware):
+class Printer(BaseHardware, NetworkMixin):
 
     @classmethod
     def _list_fields(cls):
         return (
-            *NetworkMixin._list_fields(),
             *BaseHardware._list_fields(),
+            *NetworkMixin._list_fields(),
         )
 
 
-class Scanner(NetworkMixin, BaseHardware):
+class Scanner(BaseHardware, NetworkMixin):
 
     @classmethod
     def _list_fields(cls):
         return (
-            *NetworkMixin._list_fields(),
             *BaseHardware._list_fields(),
+            *NetworkMixin._list_fields(),
         )
 
 

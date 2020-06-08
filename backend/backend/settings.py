@@ -24,7 +24,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
-    'workstation_app',
+    "hardware",
+    "inventory",
+    "periphery",
+    "workstation",
 ]
 
 MIDDLEWARE = [
