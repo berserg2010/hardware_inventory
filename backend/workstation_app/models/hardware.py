@@ -5,43 +5,114 @@ from .mixins import MemoryMixin, NetworkMixin
 
 
 class Motherboard(BaseWorkstationHardware):
-    socket = models.CharField(max_length=255)
-    chipset = models.CharField(max_length=255)
-    memory = models.CharField(max_length=255)
-    graphic = models.CharField(max_length=255)
-    form_factor = models.CharField(max_length=255)
+
+    @classmethod
+    def _list_fields(cls):
+        return (
+            *BaseWorkstationHardware._list_fields(),
+            "socket",
+            "chipset",
+            "memory",
+            "graphic",
+            "form_factor",
+        )
+
+    socket = models.CharField(max_length=255, null=True, blank=True)
+    chipset = models.CharField(max_length=255, null=True, blank=True)
+    memory = models.CharField(max_length=255, null=True, blank=True)
+    graphic = models.CharField(max_length=255, null=True, blank=True)
+    form_factor = models.CharField(max_length=255, null=True, blank=True)
 
 
 class Microprocessor(BaseWorkstationHardware):
-    core_count = models.PositiveSmallIntegerField()
-    lithography = models.PositiveSmallIntegerField()
-    frequency = models.PositiveSmallIntegerField()
+
+    @classmethod
+    def _list_fields(cls):
+        return (
+            *BaseWorkstationHardware._list_fields(),
+            "core_count",
+            "lithography",
+            "frequency",
+        )
+
+    core_count = models.PositiveSmallIntegerField(null=True, blank=True)
+    lithography = models.PositiveSmallIntegerField(null=True, blank=True)
+    frequency = models.PositiveSmallIntegerField(null=True, blank=True)
 
 
 class VideoCard(BaseWorkstationHardware):
-    interface = models.CharField(max_length=255)
+
+    @classmethod
+    def _list_fields(cls):
+        return (
+            *BaseWorkstationHardware._list_fields(),
+            "interface",
+        )
+
+    interface = models.CharField(max_length=255, null=True, blank=True)
 
 
 class Monitor(BaseWorkstationHardware):
-    panel_size = models.CharField(max_length=255)
-    panel_type = models.CharField(max_length=255)
+
+    @classmethod
+    def _list_fields(cls):
+        return (
+            *BaseWorkstationHardware._list_fields(),
+            "panel_size",
+            "panel_type",
+        )
+
+    panel_size = models.CharField(max_length=255, null=True, blank=True)
+    panel_type = models.CharField(max_length=255, null=True, blank=True)
 
 
 class PowerSupply(BaseWorkstationHardware):
+
     pass
+
+    # @classmethod
+    # def _list_fields(cls):
+    #     return (
+    #         *BaseWorkstationHardware._list_fields(),
+    #     )
 
 
 class OpticalDiscDrive(BaseWorkstationHardware):
+
     pass
+
+    # @classmethod
+    # def _list_fields(cls):
+    #     return (
+    #         *BaseWorkstationHardware._list_fields(),
+    #     )
 
 
 class Storage(BaseWorkstationHardware, MemoryMixin):
-    pass
+
+    @classmethod
+    def _list_fields(cls):
+        return (
+            *BaseWorkstationHardware._list_fields(),
+            *MemoryMixin._list_fields(),
+        )
 
 
 class Memory(BaseWorkstationHardware, MemoryMixin):
-    pass
+
+    @classmethod
+    def _list_fields(cls):
+        return (
+            *BaseWorkstationHardware._list_fields(),
+            *MemoryMixin._list_fields(),
+        )
 
 
 class NetworkCard(BaseWorkstationHardware, NetworkMixin):
-    pass
+
+    @classmethod
+    def _list_fields(cls):
+        return (
+            *BaseWorkstationHardware._list_fields(),
+            *NetworkMixin._list_fields(),
+        )

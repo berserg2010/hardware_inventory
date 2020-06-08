@@ -11,6 +11,8 @@ DEBUG = os.environ.get(
     False
 )
 
+SITE_ID = 1
+
 ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
@@ -35,7 +37,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'hardware_inventory.urls'
+ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES = [
     {
@@ -54,7 +56,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'hardware_inventory.wsgi.application'
+WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
@@ -89,4 +91,3 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
-

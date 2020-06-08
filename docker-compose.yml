@@ -2,14 +2,14 @@ version: '3'
 
 services:
   web:
-    build: .
+    build: backend/.
     env_file:
       - env_private/web.env
       - env_private/db.env
     environment:
       - DJANGO_DEBUG=false
     volumes:
-      - .:/usr/src/hardware_inventory/backend
+      - ./backend:/usr/src/hardware_inventory
     depends_on:
       - db
 

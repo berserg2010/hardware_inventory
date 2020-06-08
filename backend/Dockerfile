@@ -6,11 +6,10 @@ ENV PYTHONUNBUFFERED 1
 
 WORKDIR /usr/src/hardware_inventory
 
-COPY backend/requirements.txt backend/requirements.txt
+COPY requirements.txt ./requirements.txt
 
-RUN pip install -r backend/requirements.txt
+RUN pip install -r requirements.txt
 
-COPY backend/. backend/
+COPY . ./
 
 EXPOSE 8000
-
