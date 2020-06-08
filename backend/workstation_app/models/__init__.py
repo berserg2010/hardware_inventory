@@ -17,21 +17,3 @@ from .periphery import (
     Scanner,
     Switсh,
 )
-
-list_class_models =(
-    Workstation,
-    Motherboard,
-    Microprocessor,
-    VideoCard,
-    Monitor,
-    PowerSupply,
-    OpticalDiscDrive,
-    Storage,
-    Memory,
-    NetworkCard,
-    Router,
-    Printer,
-    MFU,
-    Scanner,
-    Switсh,
-)

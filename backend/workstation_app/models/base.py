@@ -3,6 +3,27 @@ from django.db import models
 from .mixins import InventoryNumberMixin
 
 
+class BaseHardware(InventoryNumberMixin):
+
+    @classmethod
+    def _list_fields(cls):
+        return (
+            *InventoryNumberMixin._list_fields(),
+            "manufacturer",
+            "product_name",
+            "version",
+            "serial_number",
+        )
+
+    manufacturer = models.CharField(max_length=255, null=True, blank=True, verbose_name="Производитель")
+    product_name = models.CharField(max_length=255, null=True, blank=True, verbose_name="Наименование")
+    version = models.CharField(max_length=255, null=True, blank=True, verbose_name="Версия")
+    serial_number = models.CharField(max_length=255, null=True, blank=True, verbose_name="Серийный номер")
+
+    class Meta:
+        abstract = True
+
+
 workstation_enum = [
     ("PC", "PC"),
     ("NB", "Notebook"),
@@ -21,31 +42,10 @@ class Workstation(InventoryNumberMixin):
         max_length=2,
         choices=workstation_enum,
         default="PC",
+        verbose_name="Тип"
     )
 
-    def __str__(self):
-        return f"{self.inventory_number} {self.type} {self.created.date()}"
 
-
-class BaseHardware(InventoryNumberMixin):
-
-    @classmethod
-    def _list_fields(cls):
-        return (
-            *InventoryNumberMixin._list_fields(),
-            "manufacturer",
-            "product_name",
-            "version",
-            "serial_number",
-        )
-
-    manufacturer = models.CharField(max_length=255, null=True, blank=True)
-    product_name = models.CharField(max_length=255, null=True, blank=True)
-    version = models.CharField(max_length=255, null=True, blank=True)
-    serial_number = models.CharField(max_length=255, null=True, blank=True)
-
-    class Meta:
-        abstract = True
 
 
 class BaseWorkstationHardware(BaseHardware):
@@ -62,6 +62,7 @@ class BaseWorkstationHardware(BaseHardware):
         related_query_name='%(class)ss_workstation',
         blank=True,
         default=None,
+        verbose_name = "Рабочие станции"
     )
 
     class Meta:

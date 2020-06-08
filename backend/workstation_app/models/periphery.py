@@ -23,6 +23,9 @@ class MFU(NetworkMixin, BaseHardware):
             *BaseHardware._list_fields(),
         )
 
+    class Meta:
+        verbose_name = "MFU"
+
 
 class Printer(NetworkMixin, BaseHardware):
 
@@ -45,11 +48,6 @@ class Scanner(NetworkMixin, BaseHardware):
 
 
 class Switсh(BaseHardware):
-    #
-    # @classmethod
-    # def _list_fields(cls):
-    #     return (
-    #         *BaseHardware._list_fields(),
-    #     )
 
-    pass
+    class Meta:
+        verbose_name_plural = "Switches"
