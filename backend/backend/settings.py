@@ -1,5 +1,7 @@
 import os
 
+from django.contrib import admin
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.environ.get(
@@ -24,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
+    "utils",
     "hardware",
     "inventory",
     "periphery",
@@ -94,3 +97,8 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
+admin.AdminSite.site_header = "Инвентаризация оборудования".upper()
+admin.AdminSite.empty_value_display = "--"
+admin.AdminSite.date_hierarchy = "created"
+

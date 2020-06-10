@@ -12,6 +12,17 @@ class Router(BaseHardware, NetworkMixin):
             *NetworkMixin._list_fields(),
         )
 
+    class Meta:
+        verbose_name = "01 | Маршрутизатор"
+        verbose_name_plural = "01 | Маршрутизаторы"
+
+
+class Switсh(BaseHardware):
+
+    class Meta:
+        verbose_name = "02 | Комутатор"
+        verbose_name_plural = "02 | Комутаторы"
+
 
 class MFU(BaseHardware, NetworkMixin):
 
@@ -23,7 +34,8 @@ class MFU(BaseHardware, NetworkMixin):
         )
 
     class Meta:
-        verbose_name = "MFU"
+        verbose_name = "03 | МФУ"
+        verbose_name_plural = "03 | МФУ"
 
 
 class Printer(BaseHardware, NetworkMixin):
@@ -35,6 +47,10 @@ class Printer(BaseHardware, NetworkMixin):
             *NetworkMixin._list_fields(),
         )
 
+    class Meta:
+        verbose_name = "04 | Принтер"
+        verbose_name_plural = "04 | Принтеры"
+
 
 class Scanner(BaseHardware, NetworkMixin):
 
@@ -45,8 +61,6 @@ class Scanner(BaseHardware, NetworkMixin):
             *NetworkMixin._list_fields(),
         )
 
-
-class Switсh(BaseHardware):
-
     class Meta:
-        verbose_name_plural = "Switches"
+        verbose_name = "05 | Сканер"
+        verbose_name_plural = "05 | Сканеры"

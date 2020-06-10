@@ -1,10 +1,12 @@
 from django.db import models
 
 from inventory.models import InventoryNumberMixin
-from workstation.models import Workstation, WorkstationMixin
 
 
 class MemoryMixin(models.Model):
+
+    size = models.PositiveIntegerField(verbose_name="Размер памяти")
+    form_factor = models.CharField(max_length=255, null=True, blank=True, verbose_name="Форм-фактор")
 
     @classmethod
     def _list_fields(cls):
@@ -13,14 +15,13 @@ class MemoryMixin(models.Model):
             "form_factor",
         )
 
-    size = models.PositiveIntegerField(verbose_name="Размер памяти")
-    form_factor = models.CharField(max_length=255, null=True, blank=True, verbose_name="Форм-фактор")
-
     class Meta:
         abstract = True
 
 
 class NetworkMixin(models.Model):
+
+    mac_address = models.CharField(max_length=12, null=True, blank=True, verbose_name="MAC адрес")
 
     @classmethod
     def _list_fields(cls):
@@ -28,13 +29,15 @@ class NetworkMixin(models.Model):
             "mac_address",
         )
 
-    mac_address = models.CharField(max_length=12, null=True, blank=True, verbose_name="MAC адрес")
-
     class Meta:
         abstract = True
 
 
 class BaseHardware(InventoryNumberMixin):
+
+    manufacturer = models.CharField(max_length=255, null=True, blank=True, verbose_name="Производитель")
+    product_name = models.CharField(max_length=255, null=True, blank=True, verbose_name="Наименование")
+    version = models.CharField(max_length=255, null=True, blank=True, verbose_name="Версия")
 
     @classmethod
     def _list_fields(cls):
@@ -43,19 +46,19 @@ class BaseHardware(InventoryNumberMixin):
             "manufacturer",
             "product_name",
             "version",
-            "serial_number",
         )
-
-    manufacturer = models.CharField(max_length=255, null=True, blank=True, verbose_name="Производитель")
-    product_name = models.CharField(max_length=255, null=True, blank=True, verbose_name="Наименование")
-    version = models.CharField(max_length=255, null=True, blank=True, verbose_name="Версия")
-    serial_number = models.CharField(max_length=255, null=True, blank=True, verbose_name="Серийный номер")
 
     class Meta:
         abstract = True
 
 
-class Motherboard(BaseHardware, WorkstationMixin):
+class Motherboard(BaseHardware):
+
+    socket = models.CharField(max_length=255, null=True, blank=True, verbose_name="Сокет")
+    chipset = models.CharField(max_length=255, null=True, blank=True, verbose_name="Чипсет")
+    memory = models.CharField(max_length=255, null=True, blank=True, verbose_name="Тип памяти")
+    graphic = models.CharField(max_length=255, null=True, blank=True, verbose_name="Графический адаптер")
+    form_factor = models.CharField(max_length=255, null=True, blank=True, verbose_name="Форм-фактор")
 
     @classmethod
     def _list_fields(cls):
@@ -68,14 +71,17 @@ class Motherboard(BaseHardware, WorkstationMixin):
             "form_factor",
         )
 
-    socket = models.CharField(max_length=255, null=True, blank=True, verbose_name="Сокет")
-    chipset = models.CharField(max_length=255, null=True, blank=True, verbose_name="Чипсет")
-    memory = models.CharField(max_length=255, null=True, blank=True, verbose_name="Тип памяти")
-    graphic = models.CharField(max_length=255, null=True, blank=True, verbose_name="Графический адаптер")
-    form_factor = models.CharField(max_length=255, null=True, blank=True, verbose_name="Форм-фактор")
+    class Meta:
+        ordering = ["-created"]
+        verbose_name = "01 | Материнская плата"
+        verbose_name_plural = "01 | Материнские платы"
 
 
-class Microprocessor(BaseHardware, WorkstationMixin):
+class Microprocessor(BaseHardware):
+
+    core_count = models.PositiveSmallIntegerField(null=True, blank=True, verbose_name="Колличество ядер")
+    lithography = models.PositiveSmallIntegerField(null=True, blank=True, verbose_name="Техпроцесс")
+    frequency = models.PositiveSmallIntegerField(null=True, blank=True, verbose_name="Частота")
 
     @classmethod
     def _list_fields(cls):
@@ -86,12 +92,13 @@ class Microprocessor(BaseHardware, WorkstationMixin):
             "frequency",
         )
 
-    core_count = models.PositiveSmallIntegerField(null=True, blank=True, verbose_name="Колличество ядер")
-    lithography = models.PositiveSmallIntegerField(null=True, blank=True, verbose_name="Техпроцесс")
-    frequency = models.PositiveSmallIntegerField(null=True, blank=True, verbose_name="Частота")
+    class Meta:
+        ordering = ["-created"]
+        verbose_name = "02 | Процессор"
+        verbose_name_plural = "02 | Процессоры"
 
 
-class Memory(BaseHardware, MemoryMixin, WorkstationMixin):
+class Memory(BaseHardware, MemoryMixin):
 
     @classmethod
     def _list_fields(cls):
@@ -101,10 +108,12 @@ class Memory(BaseHardware, MemoryMixin, WorkstationMixin):
         )
 
     class Meta:
-        verbose_name_plural = "Memory"
+        ordering = ["-created"]
+        verbose_name = "03 | Оперативная память"
+        verbose_name_plural = "03 | Оперативная память"
 
 
-class Storage(BaseHardware, MemoryMixin, WorkstationMixin):
+class Storage(BaseHardware, MemoryMixin):
 
     @classmethod
     def _list_fields(cls):
@@ -113,8 +122,15 @@ class Storage(BaseHardware, MemoryMixin, WorkstationMixin):
             *MemoryMixin._list_fields(),
         )
 
+    class Meta:
+        ordering = ["-created"]
+        verbose_name = "04 | Жесткий диск"
+        verbose_name_plural = "04 | Жесткие диски"
 
-class VideoCard(BaseHardware, WorkstationMixin):
+
+class VideoCard(BaseHardware):
+
+    interface = models.CharField(max_length=255, null=True, blank=True, verbose_name="Интерфейс")
 
     @classmethod
     def _list_fields(cls):
@@ -123,13 +139,16 @@ class VideoCard(BaseHardware, WorkstationMixin):
             "interface",
         )
 
-    interface = models.CharField(max_length=255, null=True, blank=True, verbose_name="Интерфейс")
-
     class Meta:
-        verbose_name_plural = "Video Cards"
+        ordering = ["-created"]
+        verbose_name = "05 | Видеокарта"
+        verbose_name_plural = "05 | Видеокарты"
 
 
-class Monitor(BaseHardware, WorkstationMixin):
+class Monitor(BaseHardware):
+
+    panel_size = models.CharField(max_length=255, null=True, blank=True, verbose_name="Размер экрана")
+    panel_type = models.CharField(max_length=255, null=True, blank=True, verbose_name="Тип экрана")
 
     @classmethod
     def _list_fields(cls):
@@ -139,23 +158,29 @@ class Monitor(BaseHardware, WorkstationMixin):
             "panel_type",
         )
 
-    panel_size = models.CharField(max_length=255, null=True, blank=True, verbose_name="Размер экрана")
-    panel_type = models.CharField(max_length=255, null=True, blank=True, verbose_name="Тип экрана")
+    class Meta:
+        ordering = ["-created"]
+        verbose_name = "06 | Монитор"
+        verbose_name_plural = "06 | Мониторы"
 
 
-class PowerSupply(BaseHardware, WorkstationMixin):
+class PowerSupply(BaseHardware):
 
     class Meta:
-        verbose_name_plural = "Power Supply"
+        ordering = ["-created"]
+        verbose_name = "07 | Блок питания"
+        verbose_name_plural = "07 | Блоки питания"
 
 
-class OpticalDiscDrive(BaseHardware, WorkstationMixin):
+class OpticalDiscDrive(BaseHardware):
 
     class Meta:
-        verbose_name_plural = "Optical Disc Drives"
+        ordering = ["-created"]
+        verbose_name = "08 | Привод оптических дисков"
+        verbose_name_plural = "08 | Приводы оптических дисков"
 
 
-class NetworkCard(BaseHardware, NetworkMixin, WorkstationMixin):
+class NetworkCard(BaseHardware, NetworkMixin):
 
     @classmethod
     def _list_fields(cls):
@@ -165,4 +190,6 @@ class NetworkCard(BaseHardware, NetworkMixin, WorkstationMixin):
         )
 
     class Meta:
-        verbose_name_plural = "Network Cards"
+        ordering = ["-created"]
+        verbose_name = "09 | Сетевая карта"
+        verbose_name_plural = "09 | Сетевые карты"
