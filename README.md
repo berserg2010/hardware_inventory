@@ -12,6 +12,10 @@ https://docs.docker.com/engine/install/
 Потребуется ввести `Username` и `Password`.
 
 
+### Иницыализация данных приложений
+    docker-compose run web python manage.py loaddata <app>/fixtures/init_<app>.json
+
+
 ### Запуск контейнеров
 
 При первом запуске:
@@ -24,3 +28,7 @@ https://docs.docker.com/engine/install/
 
 ### Запуск unit тестов
     docker-compose run web pytest
+
+
+### Снятие копии с базы данных приложения
+    docker-compose run web python manage.py dumpdata <app> --indent 2 --output dump_<app>.json
