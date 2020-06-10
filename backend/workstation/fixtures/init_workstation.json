@@ -1,0 +1,272 @@
+[
+{
+  "model": "workstation.workstation",
+  "pk": 1,
+  "fields": {
+    "inventory_number": "000001",
+    "description": "\u041e\u0442\u0434\u0435\u043b \u0418\u0422",
+    "received": "2020-05-01",
+    "created": "2020-06-10",
+    "changed": "2020-06-10",
+    "type": "PC"
+  }
+},
+{
+  "model": "workstation.workstation",
+  "pk": 2,
+  "fields": {
+    "inventory_number": "000002",
+    "description": "\u0411\u0443\u0445\u0433\u0430\u043b\u0442\u0435\u0440\u0438\u044f",
+    "received": "2020-06-09",
+    "created": "2020-06-10",
+    "changed": "2020-06-10",
+    "type": "PC"
+  }
+},
+{
+  "model": "workstation.workstation",
+  "pk": 3,
+  "fields": {
+    "inventory_number": "000001",
+    "description": "\u041e\u0442\u0434\u0435\u043b \u0418\u0422",
+    "received": "2020-06-01",
+    "created": "2020-06-10",
+    "changed": "2020-06-10",
+    "type": "PC"
+  }
+},
+{
+  "model": "workstation.motherboardrelationship",
+  "pk": 1,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 1,
+    "motherboard": 2
+  }
+},
+{
+  "model": "workstation.motherboardrelationship",
+  "pk": 2,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 2,
+    "motherboard": 1
+  }
+},
+{
+  "model": "workstation.motherboardrelationship",
+  "pk": 3,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 3,
+    "motherboard": 2
+  }
+},
+{
+  "model": "workstation.microprocessorrelationship",
+  "pk": 1,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 1,
+    "microprocessor": 3
+  }
+},
+{
+  "model": "workstation.microprocessorrelationship",
+  "pk": 2,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 2,
+    "microprocessor": 2
+  }
+},
+{
+  "model": "workstation.microprocessorrelationship",
+  "pk": 3,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 3,
+    "microprocessor": 1
+  }
+},
+{
+  "model": "workstation.memoryrelationship",
+  "pk": 1,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 1,
+    "memory": 1
+  }
+},
+{
+  "model": "workstation.memoryrelationship",
+  "pk": 2,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 2,
+    "memory": 2
+  }
+},
+{
+  "model": "workstation.memoryrelationship",
+  "pk": 3,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 3,
+    "memory": 1
+  }
+},
+{
+  "model": "workstation.storagerelationship",
+  "pk": 1,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 1,
+    "storage": 2
+  }
+},
+{
+  "model": "workstation.storagerelationship",
+  "pk": 2,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 2,
+    "storage": 1
+  }
+},
+{
+  "model": "workstation.storagerelationship",
+  "pk": 3,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 3,
+    "storage": 2
+  }
+},
+{
+  "model": "workstation.videocardrelationship",
+  "pk": 1,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 1,
+    "video_card": 1
+  }
+},
+{
+  "model": "workstation.videocardrelationship",
+  "pk": 2,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 2,
+    "video_card": 1
+  }
+},
+{
+  "model": "workstation.videocardrelationship",
+  "pk": 3,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 3,
+    "video_card": 1
+  }
+},
+{
+  "model": "workstation.monitorrelationship",
+  "pk": 1,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 1,
+    "monitor": 1
+  }
+},
+{
+  "model": "workstation.monitorrelationship",
+  "pk": 2,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 2,
+    "monitor": 2
+  }
+},
+{
+  "model": "workstation.monitorrelationship",
+  "pk": 3,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 3,
+    "monitor": 1
+  }
+},
+{
+  "model": "workstation.powersupplyrelationship",
+  "pk": 1,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 1,
+    "power_supply": 1
+  }
+},
+{
+  "model": "workstation.powersupplyrelationship",
+  "pk": 2,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 2,
+    "power_supply": 2
+  }
+},
+{
+  "model": "workstation.powersupplyrelationship",
+  "pk": 3,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 3,
+    "power_supply": 1
+  }
+},
+{
+  "model": "workstation.opticaldiscdriverelationship",
+  "pk": 1,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 1,
+    "optical_disc_drive": 2
+  }
+},
+{
+  "model": "workstation.opticaldiscdriverelationship",
+  "pk": 2,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 2,
+    "optical_disc_drive": 4
+  }
+},
+{
+  "model": "workstation.opticaldiscdriverelationship",
+  "pk": 3,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 3,
+    "optical_disc_drive": 2
+  }
+},
+{
+  "model": "workstation.networkcardrelationship",
+  "pk": 1,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 1,
+    "network_card": 2
+  }
+},
+{
+  "model": "workstation.networkcardrelationship",
+  "pk": 2,
+  "fields": {
+    "entered": "2020-06-09",
+    "workstation": 3,
+    "network_card": 2
+  }
+}
+]

@@ -1,0 +1,540 @@
+[
+{
+  "model": "hardware.motherboard",
+  "pk": 1,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041c\u0430\u0442\u0435\u0440\u0438\u043d\u0441\u043a\u0430\u044f \u043f\u043b\u0430\u0442\u0430 MSI B450M-A PRO MAX",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "MSI",
+    "product_name": "B450M-A PRO MAX",
+    "version": null,
+    "socket": "AM4",
+    "chipset": "AMD B450",
+    "memory": "DDR4 DIMM, 1866-4133 \u041c\u0413\u0446",
+    "graphic": null,
+    "form_factor": "microATX"
+  }
+},
+{
+  "model": "hardware.motherboard",
+  "pk": 2,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041c\u0430\u0442\u0435\u0440\u0438\u043d\u0441\u043a\u0430\u044f \u043f\u043b\u0430\u0442\u0430 GIGABYTE GA-B250-FinTech (rev. 1.0)",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "GIGABYTE",
+    "product_name": "GA-B250-FinTech",
+    "version": "rev. 1.0",
+    "socket": "LGA1151",
+    "chipset": "Intel B250",
+    "memory": "4 \u0441\u043b\u043e\u0442\u0430 DDR4 DIMM, 2133-2400 \u041c\u0413\u0446",
+    "graphic": null,
+    "form_factor": "microATX"
+  }
+},
+{
+  "model": "hardware.motherboard",
+  "pk": 3,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041c\u0430\u0442\u0435\u0440\u0438\u043d\u0441\u043a\u0430\u044f \u043f\u043b\u0430\u0442\u0430 ASRock B450M Pro4-F",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "ASRock",
+    "product_name": "B450M Pro4-F",
+    "version": null,
+    "socket": "AM4",
+    "chipset": "AMD B450",
+    "memory": "4 \u0441\u043b\u043e\u0442\u0430 DDR4 DIMM, 2133-3200 \u041c\u0413\u0446",
+    "graphic": null,
+    "form_factor": "microATX"
+  }
+},
+{
+  "model": "hardware.motherboard",
+  "pk": 4,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041c\u0430\u0442\u0435\u0440\u0438\u043d\u0441\u043a\u0430\u044f \u043f\u043b\u0430\u0442\u0430 ASUS Z170I PRO GAMING",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "ASUS",
+    "product_name": "Z170I PRO GAMING",
+    "version": null,
+    "socket": "LGA1151",
+    "chipset": "Intel Z170",
+    "memory": "2 \u0441\u043b\u043e\u0442\u0430 DDR4 DIMM, 2133-3400 \u041c\u0413\u0446",
+    "graphic": null,
+    "form_factor": "mini-ITX"
+  }
+},
+{
+  "model": "hardware.microprocessor",
+  "pk": 1,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0440 Intel Core i5 Coffee Lake",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "Intel",
+    "product_name": "Coffee Lake-S",
+    "version": "LGA1151 v2",
+    "core_count": 6,
+    "lithography": 14,
+    "frequency": 2900
+  }
+},
+{
+  "model": "hardware.microprocessor",
+  "pk": 2,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0440 AMD Ryzen 5 3600",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "AMD",
+    "product_name": "Ryzen 5 3600",
+    "version": "Matisse",
+    "core_count": 6,
+    "lithography": 7,
+    "frequency": 3600
+  }
+},
+{
+  "model": "hardware.microprocessor",
+  "pk": 3,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0440 Intel Core i3 Coffee Lake",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "Intel",
+    "product_name": "Core i3 Coffee Lake",
+    "version": "Coffee Lake-S",
+    "core_count": 4,
+    "lithography": 14,
+    "frequency": 3600
+  }
+},
+{
+  "model": "hardware.microprocessor",
+  "pk": 4,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0440 AMD Ryzen 5 3600X",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "AMD",
+    "product_name": "Ryzen 5 3600X",
+    "version": "AM4",
+    "core_count": 6,
+    "lithography": 7,
+    "frequency": 3800
+  }
+},
+{
+  "model": "hardware.memory",
+  "pk": 1,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430\u044f \u043f\u0430\u043c\u044f\u0442\u044c 8 \u0413\u0411 Crucial CT8G4DFS824A",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "size": 8000,
+    "form_factor": "DIMM 288",
+    "manufacturer": "Crucial",
+    "product_name": "CT8G4DFS824A",
+    "version": "DDR4"
+  }
+},
+{
+  "model": "hardware.memory",
+  "pk": 2,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430\u044f \u043f\u0430\u043c\u044f\u0442\u044c 8 \u0413\u0411 1 \u0448\u0442. Samsung DDR4 2666 DIMM 8Gb",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "size": 8000,
+    "form_factor": "DIMM 288",
+    "manufacturer": "Samsung",
+    "product_name": "M378A1K43CB2-CTD",
+    "version": "DDR4"
+  }
+},
+{
+  "model": "hardware.memory",
+  "pk": 3,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430\u044f \u043f\u0430\u043c\u044f\u0442\u044c 8 \u0413\u0411 1 \u0448\u0442. HyperX HX426C16FB3/8",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "size": 8000,
+    "form_factor": "DIMM 288",
+    "manufacturer": "HyperX",
+    "product_name": "HX426C16FB3/8",
+    "version": "DDR4"
+  }
+},
+{
+  "model": "hardware.memory",
+  "pk": 4,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430\u044f \u043f\u0430\u043c\u044f\u0442\u044c 16 \u0413\u0411 1 \u0448\u0442. Corsair CMK16GX4M1D3000C16",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "size": 16000,
+    "form_factor": "DIMM 288",
+    "manufacturer": "Corsair",
+    "product_name": "CMK16GX4M1D3000C16/8",
+    "version": "DDR4"
+  }
+},
+{
+  "model": "hardware.storage",
+  "pk": 1,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u0416\u0435\u0441\u0442\u043a\u0438\u0439 \u0434\u0438\u0441\u043a Western Digital WD10EZEX",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "size": 1000,
+    "form_factor": "3.5",
+    "manufacturer": "Western Digital",
+    "product_name": "WD10EZEX",
+    "version": null
+  }
+},
+{
+  "model": "hardware.storage",
+  "pk": 2,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u0416\u0435\u0441\u0442\u043a\u0438\u0439 \u0434\u0438\u0441\u043a Seagate Barracuda 1 TB ST1000DM010",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "size": 1000,
+    "form_factor": "3.5",
+    "manufacturer": "Seagate",
+    "product_name": "Barracuda 1 TB ST1000DM010",
+    "version": null
+  }
+},
+{
+  "model": "hardware.storage",
+  "pk": 3,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u0416\u0435\u0441\u0442\u043a\u0438\u0439 \u0434\u0438\u0441\u043a Toshiba 1 TB HDWD110UZSVA",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "size": 1000,
+    "form_factor": "3.5",
+    "manufacturer": "Toshiba",
+    "product_name": "HDWD110UZSVA",
+    "version": null
+  }
+},
+{
+  "model": "hardware.storage",
+  "pk": 4,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u0416\u0435\u0441\u0442\u043a\u0438\u0439 \u0434\u0438\u0441\u043a Seagate Barracuda 2 TB ST2000DM008",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "size": 2000,
+    "form_factor": "3.5",
+    "manufacturer": "Seagate",
+    "product_name": "ST2000DM008",
+    "version": null
+  }
+},
+{
+  "model": "hardware.videocard",
+  "pk": 1,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u0412\u0438\u0434\u0435\u043e\u043a\u0430\u0440\u0442\u0430 GIGABYTE GeForce GTX 1660 SUPER",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "GIGABYTE",
+    "product_name": "GeForce GTX 1660 SUPER",
+    "version": null,
+    "interface": "PCI-E"
+  }
+},
+{
+  "model": "hardware.videocard",
+  "pk": 2,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u0412\u0438\u0434\u0435\u043e\u043a\u0430\u0440\u0442\u0430 ASUS Radeon RX 470",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "ASUS",
+    "product_name": "Radeon RX 470",
+    "version": null,
+    "interface": "PCI-E 3.0"
+  }
+},
+{
+  "model": "hardware.videocard",
+  "pk": 3,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u0412\u0438\u0434\u0435\u043e\u043a\u0430\u0440\u0442\u0430 Sapphire Pulse Radeon RX 580",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "Sapphire",
+    "product_name": "Pulse Radeon RX 580",
+    "version": null,
+    "interface": "PCI-E"
+  }
+},
+{
+  "model": "hardware.videocard",
+  "pk": 4,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u0412\u0438\u0434\u0435\u043e\u043a\u0430\u0440\u0442\u0430 PNY Quadro P400",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "PNY",
+    "product_name": "NVIDIA Quadro P400",
+    "version": null,
+    "interface": "PCI-E"
+  }
+},
+{
+  "model": "hardware.monitor",
+  "pk": 1,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041c\u043e\u043d\u0438\u0442\u043e\u0440 Xiaomi Mi Surface Display 34\"",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "Xiaomi",
+    "product_name": "Mi Surface",
+    "version": null,
+    "panel_size": "34",
+    "panel_type": "*VA"
+  }
+},
+{
+  "model": "hardware.monitor",
+  "pk": 2,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041c\u043e\u043d\u0438\u0442\u043e\u0440 LG 29WL500 29\"",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "LG",
+    "product_name": "29WL500",
+    "version": null,
+    "panel_size": "29",
+    "panel_type": null
+  }
+},
+{
+  "model": "hardware.monitor",
+  "pk": 3,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041c\u043e\u043d\u0438\u0442\u043e\u0440 Samsung C27JG50QQI 26.9\"",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "Samsung",
+    "product_name": "C27JG50QQI",
+    "version": null,
+    "panel_size": "26.9",
+    "panel_type": "*VA"
+  }
+},
+{
+  "model": "hardware.monitor",
+  "pk": 4,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041c\u043e\u043d\u0438\u0442\u043e\u0440 Acer ET241Ybd 24\"",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "Acer",
+    "product_name": "ET241Ybd",
+    "version": null,
+    "panel_size": "24",
+    "panel_type": "IPS"
+  }
+},
+{
+  "model": "hardware.powersupply",
+  "pk": 1,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u0411\u043b\u043e\u043a \u043f\u0438\u0442\u0430\u043d\u0438\u044f Thermaltake TR2 S 650W",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "Thermaltake",
+    "product_name": "TR2 S 650W",
+    "version": null
+  }
+},
+{
+  "model": "hardware.powersupply",
+  "pk": 2,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u0411\u043b\u043e\u043a \u043f\u0438\u0442\u0430\u043d\u0438\u044f Corsair VS650 80 Plus 650W",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "Corsair",
+    "product_name": "VS650 80 Plus 650W",
+    "version": null
+  }
+},
+{
+  "model": "hardware.powersupply",
+  "pk": 3,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u0411\u043b\u043e\u043a \u043f\u0438\u0442\u0430\u043d\u0438\u044f Zalman Wattbit(XE) 83+ 600W",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "Zalman",
+    "product_name": "Wattbit(XE) 83+ 600W",
+    "version": null
+  }
+},
+{
+  "model": "hardware.powersupply",
+  "pk": 4,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u0411\u043b\u043e\u043a \u043f\u0438\u0442\u0430\u043d\u0438\u044f Cooler Master MWE White 230V V2 550W",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "Cooler Master",
+    "product_name": "MWE White V2 550W",
+    "version": null
+  }
+},
+{
+  "model": "hardware.opticaldiscdrive",
+  "pk": 1,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041e\u043f\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u043f\u0440\u0438\u0432\u043e\u0434 LG GH24NSD5 Black",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "LG",
+    "product_name": "GH24NSD5 Black",
+    "version": null
+  }
+},
+{
+  "model": "hardware.opticaldiscdrive",
+  "pk": 2,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041e\u043f\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u043f\u0440\u0438\u0432\u043e\u0434 ASUS DRW-24D5MT black",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "ASUS",
+    "product_name": "DRW-24D5MT black",
+    "version": null
+  }
+},
+{
+  "model": "hardware.opticaldiscdrive",
+  "pk": 3,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041e\u043f\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u043f\u0440\u0438\u0432\u043e\u0434 ASUS DRW-24D5MT black",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "ASUS",
+    "product_name": "DRW-24D5MT black",
+    "version": null
+  }
+},
+{
+  "model": "hardware.opticaldiscdrive",
+  "pk": 4,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u041e\u043f\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u043f\u0440\u0438\u0432\u043e\u0434 LITE-ON iHAS124 Black",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "manufacturer": "LITE-ON",
+    "product_name": "iHAS124 Black",
+    "version": null
+  }
+},
+{
+  "model": "hardware.networkcard",
+  "pk": 1,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u0421\u0435\u0442\u0435\u0432\u0430\u044f \u043a\u0430\u0440\u0442\u0430 TP-LINK TG-3468",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "mac_address": null,
+    "manufacturer": "TP-LINK",
+    "product_name": "TG-3468",
+    "version": null
+  }
+},
+{
+  "model": "hardware.networkcard",
+  "pk": 2,
+  "fields": {
+    "inventory_number": null,
+    "description": "\u0421\u0435\u0442\u0435\u0432\u0430\u044f \u043a\u0430\u0440\u0442\u0430 Intel EXPI9301CT",
+    "received": "2020-06-09",
+    "created": "2020-06-09",
+    "changed": "2020-06-10",
+    "mac_address": null,
+    "manufacturer": "Intel",
+    "product_name": "EXPI9301CT",
+    "version": null
+  }
+}
+]
