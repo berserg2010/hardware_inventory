@@ -7,7 +7,7 @@ services:
       - env_private/web.env
       - env_private/db.env
     environment:
-      - DJANGO_DEBUG=false
+      - DJANGO_DEBUG=0
     volumes:
       - ./backend:/usr/src/hardware_inventory
     depends_on:

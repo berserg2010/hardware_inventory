@@ -15,16 +15,22 @@ https://docs.docker.com/engine/install/
 ### Иницыализация данных приложений
     docker-compose run web python manage.py loaddata <app>/fixtures/init_<app>.json
 
+### Сбор статики
+    docker-compose run web python manage.py collectstatic --no-input
+
 
 ### Запуск контейнеров
 
-При первом запуске:
+#### dev
 
     docker-compose up --build
 
-В дальнейшем:
-
     docker-compose up
+    
+#### prod
+
+    docker-compose -f docker-compose.yml -f docker-compose.prod.yml up --build
+
 
 ### Запуск unit тестов
     docker-compose run web pytest

@@ -2,24 +2,14 @@ version: '3'
 
 services:
   web:
-#    build: backend/.
-#    env_file:
-#      - env_private/web.env
-#      - env_private/db.env
-#    environment:
-#      - DJANGO_DEBUG=false
-#    volumes:
-#      - ./backend:/usr/src/hardware_inventory
-#    depends_on:
-#      - db
     networks:
       - db_network
       - nginx_network
+    volumes:
+      - static_volume:/usr/src/hardware_inventory/static
+      - media_volume:/usr/src/hardware_inventory/media
 
   db:
-#    image: postgres
-#    env_file:
-#      - env_private/db.env
     networks:
       - db_network
 
@@ -27,6 +17,8 @@ services:
     image: nginx:1.17
     volumes:
     - ./proxy:/etc/nginx/conf.d
+    - static_volume:/usr/src/hardware_inventory/static
+    - media_volume:/usr/src/hardware_inventory/media
     ports:
       - 8765:80
     depends_on:
@@ -39,3 +31,7 @@ networks:
     driver: bridge
   db_network:
     driver: bridge
+
+volumes:
+  static_volume:
+  media_volume:
